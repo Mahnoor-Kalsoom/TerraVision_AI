@@ -1,0 +1,73 @@
+# ============================================================
+# FloodVision AI — .gitignore
+# ============================================================
+
+# --- Environment & Secrets ---
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.secret
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-log.txt
+pip-delete-this-directory.txt
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+*.cover
+
+# --- Model files (large binaries — add manually) ---
+# Commit a hash/checksum instead. See README for model download instructions.
+backend/models/*.keras
+backend/models/*.h5
+backend/models/*.pb
+
+# --- Datasets ---
+data/
+datasets/
+*.tif
+*.tiff
+
+# --- Node / Next.js ---
+node_modules/
+.next/
+out/
+.npm/
+*.tsbuildinfo
+frontend/.env*.local
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Logs ---
+*.log
+logs/
+
+# --- Temp / Generated ---
+tmp/
+temp/
