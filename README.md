@@ -178,6 +178,4 @@ The UI will be available at `http://localhost:3000`.
 
 ---
 
-## License
 
-For research and educational use only. See [LICENSE](LICENSE).
