@@ -8,7 +8,7 @@ const navLinks = [
     { href: "/", label: "Overview" },
     { href: "/#how-it-works", label: "How It Works" },
     { href: "/#methodology", label: "Methodology" },
-    { href: "/#tech-stack", label: "Tech Stack" },
+    { href: "/team", label: "Team" },
     { href: "/analyze", label: "Live Analysis" },
 ];
 

@@ -71,3 +71,5 @@ logs/
 # --- Temp / Generated ---
 tmp/
 temp/
+
+backend/models/*.zip

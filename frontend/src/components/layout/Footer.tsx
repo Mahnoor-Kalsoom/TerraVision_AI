@@ -32,6 +32,7 @@ export function Footer() {
                     <div className="flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-slate-400 font-medium">
                         <Link href="/" className="hover:text-teal-400 transition-colors">Overview</Link>
                         <Link href="/analyze" className="hover:text-teal-400 transition-colors">Live Tool</Link>
+                        <Link href="/team" className="hover:text-teal-400 transition-colors">Team</Link>
                         <Link href="/#how-it-works" className="hover:text-teal-400 transition-colors">Workflow</Link>
                         <Link href="/#methodology" className="hover:text-teal-400 transition-colors">Methodology</Link>
                     </div>
