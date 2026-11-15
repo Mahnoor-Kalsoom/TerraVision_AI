@@ -209,24 +209,24 @@ export function ImageUploadZone({
                     </div>
 
                     {/* Bottom file info & action bar */}
-                    <div className="px-3.5 py-2.5 flex items-center justify-between gap-2 bg-slate-900/90 border-t border-border/70">
-                        <div className="flex items-center gap-2 min-w-0">
+                    <div className="px-3 sm:px-3.5 py-2.5 flex items-center justify-between gap-2 bg-slate-900/90 border-t border-border/70">
+                        <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
                             <ImageIcon className="w-4 h-4 text-primary shrink-0" />
-                            <span className="text-xs text-foreground font-semibold truncate max-w-[140px] sm:max-w-[220px]">
+                            <span className="text-xs text-foreground font-semibold truncate max-w-[110px] xs:max-w-[140px] sm:max-w-[220px]">
                                 {fileName ?? "Selected satellite image"}
                             </span>
                             {fileSize && (
-                                <span className="text-[11px] text-muted-foreground shrink-0 font-mono">
+                                <span className="text-[10px] sm:text-[11px] text-muted-foreground shrink-0 font-mono">
                                     {formatBytes(fileSize)}
                                 </span>
                             )}
                         </div>
 
-                        <div className="flex items-center gap-2 shrink-0">
+                        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
                             <button
                                 type="button"
                                 onClick={triggerFilePicker}
-                                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-secondary text-foreground hover:bg-primary/20 hover:text-primary transition-all border border-border/80 shadow-sm cursor-pointer"
+                                className="inline-flex items-center gap-1 px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-bold bg-secondary text-foreground hover:bg-primary/20 hover:text-primary transition-all border border-border/80 shadow-sm cursor-pointer"
                                 title="Choose a different image"
                             >
                                 <RefreshCw className="w-3.5 h-3.5" />
@@ -235,7 +235,7 @@ export function ImageUploadZone({
                             <button
                                 type="button"
                                 onClick={() => onFileSelect(null)}
-                                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-secondary text-rose-400 hover:bg-rose-500/20 hover:text-rose-300 transition-all border border-border/80 shadow-sm cursor-pointer"
+                                className="inline-flex items-center gap-1 px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-bold bg-secondary text-rose-400 hover:bg-rose-500/20 hover:text-rose-300 transition-all border border-border/80 shadow-sm cursor-pointer"
                                 title="Remove image"
                                 aria-label={`Remove ${label}`}
                             >

@@ -100,12 +100,14 @@ export function ResultsDashboard({
                     value={`${result.processingTimeMs.toFixed(0)} ms`}
                     subValue="end-to-end"
                 />
-                <StatCard
-                    icon={Cpu}
-                    label="Model Version"
-                    value={result.modelVersion}
-                    subValue="U-Net · S1GFloods"
-                />
+                <div className="col-span-2 sm:col-span-1">
+                    <StatCard
+                        icon={Cpu}
+                        label="Model Version"
+                        value={result.modelVersion}
+                        subValue="U-Net · S1GFloods"
+                    />
+                </div>
             </div>
 
             {/* Side-by-side comparison */}
