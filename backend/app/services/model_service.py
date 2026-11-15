@@ -30,9 +30,22 @@ class ModelService:
         model_path = Path(settings.model_path)
 
         if not model_path.exists():
+            backend_dir = Path(__file__).resolve().parent.parent.parent
+            candidates = [
+                backend_dir / "models" / model_path.name,
+                Path(str(model_path).replace("backend/", "", 1).replace("backend\\", "", 1)),
+                backend_dir / model_path,
+                Path("models") / model_path.name,
+            ]
+            for candidate in candidates:
+                if candidate.exists():
+                    model_path = candidate
+                    break
+
+        if not model_path.exists():
             raise FileNotFoundError(
                 f"Model file not found at '{model_path}'. "
-                "Ensure 'backend/models/flood_unet_final.keras' exists."
+                "Ensure 'flood_unet_final.keras' exists in 'backend/models/'."
             )
 
         logger.info("Loading U-Net model from %s ...", model_path)

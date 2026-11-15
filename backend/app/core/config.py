@@ -60,7 +60,7 @@ class Settings(BaseSettings):
 
     # App
     debug: bool = False
-    app_name: str = "FloodVision AI"
+    app_name: str = "TerraVision AI"
 
 
 @lru_cache
