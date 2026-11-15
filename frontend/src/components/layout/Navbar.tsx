@@ -17,7 +17,9 @@ export function Navbar() {
     const [engineStatus, setEngineStatus] = useState<"checking" | "online" | "offline">("checking");
 
     useEffect(() => {
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
+        const apiUrl = (process.env.NEXT_PUBLIC_API_URL && process.env.NEXT_PUBLIC_API_URL.trim() !== "")
+            ? process.env.NEXT_PUBLIC_API_URL
+            : "";
         fetch(`${apiUrl}/api/v1/health`)
             .then((res) => {
                 if (res.ok) setEngineStatus("online");
